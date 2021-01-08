@@ -15,9 +15,3 @@ export const login = (credentials: Credentials) =>
 export const storeToken = (token: Token) => {
   window.sessionStorage.setItem("token", token);
 };
-
-export const token = window.sessionStorage.getItem("token");
-
-if (token) {
-  api.defaults.headers.authorization = `Bearer ${token}`;
-}
