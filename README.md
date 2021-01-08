@@ -16,8 +16,8 @@ Pode-se então inicializar o projeto digitando:
 ### `yarn start`
 
 Login e Senha para testar o projeto:
-### `"usuario": "claudio.peixoto", 
-### "senha": "00000006"`
+### `"usuario": "claudio.peixoto"` 
+### `"senha": "00000006"`
 
 ## Available Scripts
 
