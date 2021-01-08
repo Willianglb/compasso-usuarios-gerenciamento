@@ -1,6 +1,7 @@
 import React, { ChangeEvent, useState, useCallback, useContext } from "react";
 import { Form, Button, Container } from "react-bootstrap";
 import { login, storeToken } from "../../services/Authentication";
+import api from "../../services/api";
 import { useHistory } from "react-router-dom";
 
 const Home: React.FC = () => {
@@ -27,6 +28,7 @@ const Home: React.FC = () => {
     try {
       const user = await login(credentials);
       storeToken(user.token);
+      api.defaults.headers.authorization = `Bearer ${user.token}`;
       history.push("/alunos");
     } catch (error) {
       console.log(error);
