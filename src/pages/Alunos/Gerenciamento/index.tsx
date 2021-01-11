@@ -49,7 +49,7 @@ const Gerenciamento: React.FC = () => {
     });
   }
 
-  //Função para criar um novo usuário ou criar um já existente
+  //Função para criar um novo usuário ou editar um já existente
   async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
     e.preventDefault();
 
