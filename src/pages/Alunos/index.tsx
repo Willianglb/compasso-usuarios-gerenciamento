@@ -33,6 +33,7 @@ const Alunos: React.FC = () => {
   async function deleteUser(id: number) {
     await api.delete(`/usuarios/${id}`);
     loadUsers();
+    alert("O usuário foi apagado com sucesso!");
   }
 
   //Função para abrir a página de cadastramento de um novo usuário
@@ -47,7 +48,8 @@ const Alunos: React.FC = () => {
 
   //Função que apaga o token da sessão, deslogando o usuário
   function logout() {
-    sessionStorage.clear();
+    sessionStorage.removeItem("token")
+    api.defaults.headers.Authorization = undefined
     history.push("/");
   }
 
